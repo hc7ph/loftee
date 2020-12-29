@@ -80,7 +80,7 @@ sub new {
     $self->{skip_lof_info} = 0 if !defined($self->{skip_lof_info});
     
     # general splice prediction parameters
-    $self->{loftee_path} = '/vep/loftee/' if !defined($self->{loftee_path});
+    $self->{loftee_path} = '/home/hc7ph/.vep/Plugins/loftee' if !defined($self->{loftee_path});
     $self->{get_splice_features} = 1 if !defined($self->{get_splice_features});
     $self->{weak_donor_cutoff} = -4 if !defined($self->{weak_donor_cutoff}); # used for filtering potenital de novo splice events: if the reference site falls below this threshold, skip it
     $self->{donor_motifs} = get_motif_info(catdir($self->{loftee_path}, 'splice_data/donor_motifs')); # returns a hash reference
